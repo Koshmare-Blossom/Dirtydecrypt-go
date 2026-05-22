@@ -1,6 +1,6 @@
 package main
 
-// rxgk trigger path - CVE-2026-46400
+// rxgk trigger path - CVE-2026-31635
 // One AF_RXRPC call per fire: random 16-byte AES key, splice file page into
 // the rxrpc receive buffer, rxgk_decrypt_skb() decrypts in-place (no COW).
 

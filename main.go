@@ -1,6 +1,6 @@
 package main
 
-// DirtyDecrypt - Go port of CVE-2026-46400 LPE.
+// DirtyDecrypt - Go port of CVE-2026-31635 LPE.
 //
 // Root cause: rxgk_decrypt_skb() in net/rxrpc/rxgk_common.h is missing
 // skb_cow_data(). The krb5enc AEAD decrypts in-place before HMAC verification.

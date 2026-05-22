@@ -2,7 +2,7 @@
 
 > One byte. One in 256. No race.
 
-Go port of [dirtydecrypt](https://github.com/v12-security/pocs/tree/main/dirtydecrypt) (CVE-2026-46400). Member of the [Dirty Frag](https://github.com/V4bel/dirtyfrag) vulnerability class.
+Go port of [dirtydecrypt](https://github.com/v12-security/pocs/tree/main/dirtydecrypt) (CVE-2026-31635). Member of the [Dirty Frag](https://github.com/V4bel/dirtyfrag) vulnerability class.
 
 ## How it works (tl;dr)
 
@@ -67,7 +67,7 @@ printf 'install rxrpc /bin/false\n' > /etc/modprobe.d/dirtydecrypt.conf
 
 | | dirtyfrag-go | fragnesia-go | **dirtydecrypt-go** |
 |---|---|---|---|
-| CVEs | CVE-2026-43284 / CVE-2026-43500 | CVE-2026-46300 | CVE-2026-46400 |
+| CVEs | CVE-2026-43284 / CVE-2026-43500 | CVE-2026-46300 | CVE-2026-31635 |
 | Transport | ESP-in-UDP + RxRPC/rxkad | ESP-in-TCP (ULP) | RxRPC/rxgk |
 | Write model | deterministic | deterministic (keystream table) | probabilistic (1/256) |
 | Fires per byte | 1 (ESP) / 3 fixed writes (rxkad) | 1 (keystream lookup) | ~256 average |
@@ -76,7 +76,7 @@ printf 'install rxrpc /bin/false\n' > /etc/modprobe.d/dirtydecrypt.conf
 ## References
 
 - [v12-security/pocs - dirtydecrypt](https://github.com/v12-security/pocs/tree/main/dirtydecrypt) - original C PoC
-- [CVE-2026-46400](https://nvd.nist.gov/vuln/detail/CVE-2026-46400)
+- [CVE-2026-31635](https://nvd.nist.gov/vuln/detail/CVE-2026-31635)
 
 ## Credits
 
